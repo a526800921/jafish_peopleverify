@@ -70,7 +70,7 @@ export default class Shape extends Verify {
     private submit: HTMLDivElement
     private submitClick = (e: MouseEvent): any => {
         let failFlag: boolean = false
-        
+
         if (!this.select.key) (failFlag = true) && this.showMsg('请选择指定的图形')
         if (this.select.key !== this.answer) (failFlag = true) && this.showMsg('请选择正确的图形')
 
@@ -90,7 +90,7 @@ export default class Shape extends Verify {
     // 提示信息
     private message: HTMLDivElement
     private msgTimer: number
-    private showMsg(msg: string): void { 
+    private showMsg(msg: string): void {
         clearTimeout(this.msgTimer)
 
         // 展示
@@ -119,12 +119,10 @@ export default class Shape extends Verify {
 
     // 初始化节点及事件
     init(): void {
-        const box = createBox()
-
         // 将节点注入body
         this.div = document.createElement('div')
         this.div.id = `jafish-shape-${this.id}`
-        this.div.innerHTML = box
+        this.div.innerHTML = createBox()
         this.div.style.display = 'none'
 
         document.body.appendChild(this.div)
@@ -175,13 +173,19 @@ export default class Shape extends Verify {
         this.reset()
     }
     // 隐藏
+    private hideTimer: number
     public hide(): void {
+        clearTimeout(this.hideTimer)
+
         this.shadow.classList.remove(showShadowClass)
-        setTimeout(() => {
+        this.hideTimer = setTimeout(() => {
             this.div.style.display = 'none'
 
             // 未验证成功，执行取消回调
-            if (this.pending !== 1) this.result.cancel && this.result.cancel()
+            if (this.pending !== 1) {
+                this.pending = null
+                this.result.cancel && this.result.cancel()
+            }
             // 移除回调
             this.result = null
             this.pending = null
@@ -201,6 +205,7 @@ export default class Shape extends Verify {
         }
     }
     // 销毁
+    private destroyed: boolean = false
     public destroy(): void {
         // 在展示中销毁
         if (this.pending) {
@@ -209,6 +214,13 @@ export default class Shape extends Verify {
             return
         }
 
+        if (this.destroyed) return
+        this.destroyed = true
+
+        // 移除timer
+        clearTimeout(this.msgTimer)
+        clearTimeout(this.hideTimer)
+
         // 移除事件
         this.shadow.removeEventListener('click', this.shadowClick)
         this.main.removeEventListener('click', this.mainClick)
@@ -216,7 +228,6 @@ export default class Shape extends Verify {
         this.closeIcon.removeEventListener('click', this.closeIconClick)
         this.resetIcon.removeEventListener('click', this.resetIconClick)
         this.submit.removeEventListener('click', this.submitClick)
-
 
         // 移除节点
         document.body.removeChild(this.div)

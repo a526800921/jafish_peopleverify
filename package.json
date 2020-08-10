@@ -1,6 +1,6 @@
 {
   "name": "@jafish/peopleverify",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "web端简易的用户行为验证",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

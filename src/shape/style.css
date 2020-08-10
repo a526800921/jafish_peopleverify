@@ -1,0 +1,327 @@
+.jafish_peopleverify_shape {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: .2s;
+}
+
+.jafish_peopleverify_shape.jps-show {
+    opacity: 1;
+}
+
+.jafish_peopleverify_shape .jps-main {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.jafish_peopleverify_shape .jpsm-title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-size: 16px;
+}
+
+.jafish_peopleverify_shape .jpsm-title span {
+    color: #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsm-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 9px;
+}
+
+.jafish_peopleverify_shape .jpsmi-item {
+    width: 84px;
+    height: 84px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    margin-right: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmi-item::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.jafish_peopleverify_shape .jpsmi-active {
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmi-active::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -4px;
+    right: -4px;
+    top: -4px;
+    bottom: -4px;
+    border: 3px solid #409EFF;
+    border-radius: 10px;
+}
+
+.jafish_peopleverify_shape .jpsmii-1 {
+    height: 0;
+    width: 0;
+    border: 40px solid transparent;
+    border-bottom-color: #409EFF;
+    margin-top: -40px;
+}
+
+.jafish_peopleverify_shape .jpsmii-2 {
+    height: 60px;
+    width: 60px;
+    background-color: #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-3 {
+    height: 35px;
+    width: 70px;
+    background-color: #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-4 {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-5 {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 4px solid #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-6 {
+    height: 40px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-7 {
+    width: 38px;
+    position: relative;
+    border-width: 34px 14px 0;
+    border-style: solid;
+    border-color: #409EFF transparent;
+    margin-top: 26px;
+}
+
+.jafish_peopleverify_shape .jpsmii-7::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -62px;
+    left: -14px;
+    border-width: 0 33px 28px;
+    border-style: solid;
+    border-color: transparent transparent #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-8 {
+    width: 35px;
+    height: 70px;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    background: #409EFF;
+}
+
+.jafish_peopleverify_shape .jpsmii-9 {
+    height: 0;
+    width: 0;
+    border: 22px solid transparent;
+    border-left-color: #409EFF;
+    margin-left: 68px;
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmii-9::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 20px;
+    background-color: #409EFF;
+    top: -10px;
+    left: -72px;
+}
+
+.jafish_peopleverify_shape .jpsmii-10 {
+    height: 0;
+    width: 0;
+    border: 22px solid transparent;
+    border-right-color: #409EFF;
+    margin-right: 68px;
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmii-10::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 20px;
+    background-color: #409EFF;
+    top: -10px;
+    right: -72px;
+}
+
+.jafish_peopleverify_shape .jpsmii-11 {
+    height: 0;
+    width: 0;
+    border: 22px solid transparent;
+    border-bottom-color: #409EFF;
+    margin-bottom: 68px;
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmii-11::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 50px;
+    background-color: #409EFF;
+    left: -10px;
+    bottom: -72px;
+}
+
+.jafish_peopleverify_shape .jpsmii-12 {
+    height: 0;
+    width: 0;
+    border: 22px solid transparent;
+    border-top-color: #409EFF;
+    margin-top: 68px;
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmii-12::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 50px;
+    background-color: #409EFF;
+    left: -10px;
+    top: -72px;
+}
+
+.jafish_peopleverify_shape .jpsmii-13 {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid #409EFF;
+    position: relative;
+    margin-top: -20px;
+}
+
+.jafish_peopleverify_shape .jpsmii-13::after {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid #409EFF;
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: -30px;
+}
+
+.jafish_peopleverify_shape .jpsmii-14 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 #409EFF;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.jafish_peopleverify_shape .jpsm-panel {
+    position: relative;
+    z-index: 0;
+}
+
+.jafish_peopleverify_shape .jpsmp-msg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 24px;
+    background-color: rgba(230, 162, 60, .9);
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 12px;
+    color: #fff;
+    transition: .2s;
+}
+
+.jafish_peopleverify_shape .jpsmp-msg.jpsmpm-show {
+    top: -24px;
+}
+
+.jafish_peopleverify_shape .jpsmp-box {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.jafish_peopleverify_shape .jpsmp-left {
+    display: flex;
+    align-items: center;
+}
+
+.jafish_peopleverify_shape .jpsmpl-img {
+    display: block;
+    height: 22px;
+    width: 22px;
+    margin-right: 6px;
+    padding: 3px;
+}
+
+.jafish_peopleverify_shape .jpsmp-right {
+    height: 34px;
+    width: 100px;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    background-color: #409EFF;
+    border-radius: 4px;
+}
+

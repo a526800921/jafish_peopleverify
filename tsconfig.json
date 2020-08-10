@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Basic Options */
+    // "incremental": true,                   /* 启用增量编译 */
+    "target": "es5",                          /* 指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",                     /* 指定模块代码生成: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    "lib": ["es5", "es6", "es7", "dom"],      /* 指定要包含在编译中的库文件. */
+    // "allowJs": true,                       /* 允许编译javascript文件. */
+    // "checkJs": true,                       /* 报告.js文件中的错误. */
+    // "jsx": "preserve",                     /* 指定JSX代码生成: 'preserve', 'react-native', or 'react'. */
+    "declaration": true,                   /* 生成相应的'.d.ts' file. */
+    // "declarationMap": true,                /* 为每个对应生成一个sourcemap '.d.ts' file. */
+    // "sourceMap": true,                     /* 生成相应的'.map' file. */
+    // "outFile": "./",                       /*连接并发出输出到单个文件. */
+    "outDir": "dist",                        /* 将输出结构重定向到目录. */
+    // "rootDir": "./",                       /* 指定输入文件的根目录。用于控制输出目录结构 --outDir. */
+    // "composite": true,                     /* 使项目编译 */
+    // "tsBuildInfoFile": "./",               /* 指定用于存储增量编译信息的文件 */
+    "removeComments": false,                /* 不发出注释到输出. */
+    // "noEmit": true,                        /* 不发出输出. */
+    // "importHelpers": true,                 /* 从“tslib”导入发出助手. */
+    // "downlevelIteration": true,            /* 当目标是“ES5”或“ES3”时，在“for-of”、扩展和销毁中提供对迭代的全面支持. */
+    // "isolatedModules": true,               /* 将每个文件置换为单独的模块(类似于' s. transpilemodule '). */
+
+    /* Strict Type-Checking Options */
+    // "strict": true,                           /* 启用所有严格类型检查选项. */
+    // "noImplicitAny": true,                 /* 对隐含的“any”类型的表达式和声明引发错误. */
+    // "strictNullChecks": true,              /* 启用严格的空检查. */
+    // "strictFunctionTypes": true,           /* 启用函数类型的严格检查. */
+    // "strictBindCallApply": true,           /* 在函数上启用严格的“绑定”、“调用”和“应用”方法. */
+    // "strictPropertyInitialization": true,  /* 启用严格检查类中的属性初始化. */
+    // "noImplicitThis": true,                /* 在隐含的“any”类型的“this”表达式上引发错误。 */
+    // "alwaysStrict": true,                  /* 以严格模式解析并为每个源文件发出“use strict”。 */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                /* 报告未使用的本地变量的错误. */
+    // "noUnusedParameters": true,            /* 报告未使用参数的错误. */
+    // "noImplicitReturns": true,             /* 当函数中并非所有代码路径都返回值时，报告错误. */
+    // "noFallthroughCasesInSwitch": true,    /* 报告switch语句中的故障案例的错误. */
+
+    /* Module Resolution Options */
+    // "moduleResolution": "node",            /* 指定模块解析策略: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    // "baseUrl": "./",                       /* 用于解析非绝对模块名称的基本目录. */
+    // "paths": {},                           /* 将导入重新映射到查找位置的一系列条目 'baseUrl'. */
+    // "rootDirs": [],                        /* 根文件夹的列表，其组合内容表示运行时项目的结构. */
+    "typeRoots": ["src/*"],                       /* 要包含类型定义的文件夹的列表. */
+    // "types": [],                           /* 要包含在编译中的类型声明文件。 */
+    // "allowSyntheticDefaultImports": true,  /* 允许从没有默认导出的模块进行默认导入。这并不影响代码发出，只是类型转换. */
+    "esModuleInterop": true,                  /* 通过为所有导入创建名称空间对象，启用CommonJS和ES模块之间的发射互操作性。意味着 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,              /* 不解析符号链接的真实路径。 */
+    // "allowUmdGlobalAccess": true,          /* 允许从模块访问UMD全局变量. */
+
+    /* Source Map Options */
+    // "sourceRoot": "",                      /* 指定调试器应该定位TypeScript文件的位置，而不是源文件的位置。 */
+    // "mapRoot": "",                         /* 指定调试器应该定位映射文件的位置，而不是生成的位置. */
+    // "inlineSourceMap": true,               /* 发出带有源映射的单个文件，而不是拥有单独的文件。 */
+    // "inlineSources": true,                 /* 在单个文件中将源文件与源文件一起发出;需要设置“—inlineSourceMap”或“—sourceMap”。 */
+
+    /* Experimental Options */
+    // "experimentalDecorators": true,        /* 启用对ES7装饰器的实验性支持. */
+    // "emitDecoratorMetadata": true,         /* 启用对为装饰器发出类型元数据的实验支持。 */
+
+    /* Advanced Options */
+    "skipLibCheck": true,                     /* 跳过声明文件的类型检查。 */
+    "forceConsistentCasingInFileNames": true  /* 不允许对同一文件使用不一致大小写的引用。 */
+  }
+}

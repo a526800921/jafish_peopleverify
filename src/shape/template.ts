@@ -28,7 +28,7 @@ const getRandom = (num: number): number => Math.floor(Math.random() * num)
 export const createBox = (): string => {
 
     return `
-        <div class="jafish_peopleverify_shape">
+        <div class="jafish_peopleverify jafish_peopleverify_shape">
             <div class="jps-main">
                 <div class="jpsm-title"></div>
         

@@ -26,6 +26,27 @@ shape.start({
 shape.destroy()
 ```
 
+### 实践
+
+```js
+import { Shape } from '@jafish/peopleverify';
+
+export const shapeVerify = () => new Promise(resolve => {
+    const shape = new Shape();
+
+    shape.start({
+        success() {
+            resolve(true);
+            shape.destroy();
+        },
+        cancel() {
+            resolve(false);
+            shape.destroy();
+        },
+    });
+});
+```
+
 形状列表：
 
 * 1 -> 三角形

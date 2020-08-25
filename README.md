@@ -63,3 +63,9 @@ export const shapeVerify = () => new Promise(resolve => {
 * 12 -> 向下箭头
 * 13 -> 六角星
 * 14 -> 月亮
+
+### 更新
+
+> 1.0.3 
+
+* 更新了在选择错误的选项时，更新选项

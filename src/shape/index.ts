@@ -70,13 +70,16 @@ export default class Shape extends Verify {
     private submit: HTMLDivElement
     private submitClick = (e: MouseEvent): any => {
         let failFlag: boolean = false
+        let resetFlag: boolean = false
 
         if (!this.select.key) (failFlag = true) && this.showMsg('请选择指定的图形')
-        if (this.select.key !== this.answer) (failFlag = true) && this.showMsg('请选择正确的图形')
+        else if (this.select.key !== this.answer) (failFlag = resetFlag = true) && this.showMsg('请选择正确的图形')
 
         if (failFlag) {
             // 失败回调
             this.result.fail && this.result.fail()
+            // 失败刷新
+            resetFlag && this.reset()
             return
         }
 
